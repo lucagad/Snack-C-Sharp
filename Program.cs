@@ -21,6 +21,17 @@
 //Il software chiede all'utente di inserire un numero.
 //Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
 
+// Array
+
+// Snack 6
+// In un array sono contenuti i nomi degli invitati alla festa del grande
+// Gatsby.Chiedi all'utente il suo nome e comunicagli se può partecipare o meno alla festa.
+
+// Snack 7
+// Crea un array vuoto.
+// Chiedi per 6 volte all'utente di inserire un numero, se è dispari inseriscilo nell'array.
+
+
 
 using System;
 
@@ -33,6 +44,7 @@ Console.WriteLine(" 3 - Snack 3");
 Console.WriteLine(" 4 - Snack 4");
 Console.WriteLine(" 5 - Snack 5");
 Console.WriteLine(" 6 - Snack 6");
+Console.WriteLine(" 7 - Snack 7");
 
 Console.WriteLine(" ");
 
@@ -144,7 +156,7 @@ switch (optionSelected)
     #endregion
 
     case 6:
-
+        #region
         string[] whiteList = { "Luca", "Mario", "Giovanni", "Francesco" };
 
         Console.WriteLine("Inserisci il tuo nome: ");
@@ -165,10 +177,39 @@ switch (optionSelected)
           {
             Console.WriteLine("Il tuo nome non è tra gli invitati");
           }
+        
+        break;
+    #endregion
 
+    case 7:
+        #region
+        int[] numbersInsert = new int[6];
+
+        for (int i = 0; i < 6; i++)
+        {
+            Console.WriteLine("Inserisci il {0}° numero", i + 1);
+
+            int numberTemp = Convert.ToInt32(Console.ReadLine());
+
+            if (numberTemp % 2 != 0)
+            {
+                numbersInsert[i] = numberTemp;
+            }
+            Console.WriteLine(" ");
+
+        }
+
+        Console.WriteLine("I numeri dispari che hai inserto sono: ");
+
+        for (int i = 0; i < 6; i++)
+        {
+            if (numbersInsert[i] != 0){
+                Console.Write(numbersInsert[i] + " ");
+            }
+        }
 
         break;
-
+        #endregion
 
     default:
         Console.WriteLine("Il codice inserito è erratto");
@@ -176,15 +217,6 @@ switch (optionSelected)
 }
 
 
-// Array
-
-// Snack 6
-// In un array sono contenuti i nomi degli invitati alla festa del grande
-// Gatsby.Chiedi all'utente il suo nome e comunicagli se può partecipare o meno alla festa.
-
-// Snack 7
-// Crea un array vuoto.
-// Chiedi per 6 volte all'utente di inserire un numero, se è dispari inseriscilo nell'array.
 
 // Snack8
 // Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
