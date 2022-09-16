@@ -31,6 +31,9 @@
 // Crea un array vuoto.
 // Chiedi per 6 volte all'utente di inserire un numero, se è dispari inseriscilo nell'array.
 
+// Snack8
+// Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+
 
 
 using System;
@@ -45,6 +48,7 @@ Console.WriteLine(" 4 - Snack 4");
 Console.WriteLine(" 5 - Snack 5");
 Console.WriteLine(" 6 - Snack 6");
 Console.WriteLine(" 7 - Snack 7");
+Console.WriteLine(" 8 - Snack 8");
 
 Console.WriteLine(" ");
 
@@ -237,7 +241,4 @@ switch (optionSelected)
         break;
 }
 
-
-// Snack8
-// Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
