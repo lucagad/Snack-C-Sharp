@@ -32,6 +32,7 @@ Console.WriteLine(" 2 - Snack 2");
 Console.WriteLine(" 3 - Snack 3");
 Console.WriteLine(" 4 - Snack 4");
 Console.WriteLine(" 5 - Snack 5");
+Console.WriteLine(" 6 - Snack 6");
 
 Console.WriteLine(" ");
 
@@ -140,7 +141,34 @@ switch (optionSelected)
         }
                 
         break;
-        #endregion
+    #endregion
+
+    case 6:
+
+        string[] whiteList = { "Luca", "Mario", "Giovanni", "Francesco" };
+
+        Console.WriteLine("Inserisci il tuo nome: ");
+        string nameIns = Console.ReadLine();
+        bool nameFinded = false;
+
+        for (int i = 0; i < whiteList.Length; i++)
+        {
+            if (whiteList[i] == nameIns)
+            {
+                Console.WriteLine("Il tuo nome è tra gli invitati, Benvenuto!");
+                nameFinded = true;
+                break;
+            }
+        }
+
+        if (nameFinded == false)
+          {
+            Console.WriteLine("Il tuo nome non è tra gli invitati");
+          }
+
+
+        break;
+
 
     default:
         Console.WriteLine("Il codice inserito è erratto");
@@ -148,5 +176,16 @@ switch (optionSelected)
 }
 
 
+// Array
 
+// Snack 6
+// In un array sono contenuti i nomi degli invitati alla festa del grande
+// Gatsby.Chiedi all'utente il suo nome e comunicagli se può partecipare o meno alla festa.
+
+// Snack 7
+// Crea un array vuoto.
+// Chiedi per 6 volte all'utente di inserire un numero, se è dispari inseriscilo nell'array.
+
+// Snack8
+// Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
