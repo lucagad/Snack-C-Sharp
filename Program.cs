@@ -6,10 +6,20 @@
 // L'utente inserisce due parole in successione.
 // Il software stampa prima la parola più corta, poi la parola più lunga.
 
+// Ciclo for
+
+// SNACK 3
+// Il software deve chiedere per 10 volte all'utente di inserire un numero.
+// Il programma stampa la somma di tutti i numeri inseriti.
+
+
 Console.WriteLine("Ciao! Scegli uno dei seguenti Snack:");
+
+Console.WriteLine(" ");
 Console.WriteLine(" 1 - Snack 1");
 Console.WriteLine(" 2 - Snack 2");
 Console.WriteLine(" 3 - Snack 3");
+Console.WriteLine(" 4 - Snack 4");
 
 Console.WriteLine(" ");
 
@@ -71,7 +81,7 @@ switch (optionSelected)
     #endregion
 
     case 3:
-
+        #region
         int sumNumberIns = 0;
 
         for (int i = 0; i < 10; i++)
@@ -85,6 +95,22 @@ switch (optionSelected)
         Console.WriteLine("Il somma dei numeri inseriti è: " + sumNumberIns);
 
         break;
+        #endregion
+
+    case 4:
+        #region
+        int sumNumber = 0;
+
+        for (int i = 2; i <= 10; i++)
+        {
+            sumNumber += i;
+        }
+
+        Console.WriteLine("Il somma dei numeri è: " + sumNumber);
+        Console.WriteLine("La media dei numeri è: " + sumNumber/9);
+
+        break;
+        #endregion
 
     default:
         Console.WriteLine("Il codice inserito è erratto");
@@ -93,11 +119,6 @@ switch (optionSelected)
 
 
 
-// Ciclo for
-
-// SNACK 3
-// Il software deve chiedere per 10 volte all'utente di inserire un numero.
-// Il programma stampa la somma di tutti i numeri inseriti.
 
 // SNACK 4
 // Calcola la somma e la media dei numeri da 2 a 10.
