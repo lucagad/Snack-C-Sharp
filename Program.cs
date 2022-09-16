@@ -9,20 +9,26 @@
 Console.WriteLine("Ciao! Scegli uno dei seguenti Snack:");
 Console.WriteLine(" 1 - Snack 1");
 Console.WriteLine(" 2 - Snack 2");
+Console.WriteLine(" 3 - Snack 3");
+
+Console.WriteLine(" ");
 
 Console.WriteLine("Inserisci il numero dello Snack scelto: ");
 int optionSelected = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(" ");
 
 switch (optionSelected)
 
 {
+    
     case 1:
+        #region
 
         int numberMax = 0;
 
         for (int i = 0; i < 2; i++)
         {
-            Console.WriteLine("Ciao! Inserisci il {0}° numero", i + 1);
+            Console.WriteLine("Inserisci il {0}° numero", i + 1);
             int numberIns = Convert.ToInt32(Console.ReadLine());
 
             if (numberMax < numberIns)
@@ -34,15 +40,18 @@ switch (optionSelected)
         Console.WriteLine("Il numero Maggiore tra i due è: " + numberMax);
 
         break;
+        #endregion
 
     case 2:
-
+        #region
         string[] wordsInsert = new string[2];
 
         for (int i = 0; i < 2; i++)
         {
-            Console.WriteLine("Ciao! Inserisci la {0}° parola", i + 1);
+            Console.WriteLine("Inserisci la {0}° parola", i + 1);
             wordsInsert[i] = Convert.ToString(Console.ReadLine());
+            Console.WriteLine(" ");
+
         }
 
         if (wordsInsert[0].Length > wordsInsert[1].Length)
@@ -59,8 +68,26 @@ switch (optionSelected)
         }
 
         break;
+    #endregion
+
+    case 3:
+
+        int sumNumberIns = 0;
+
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Inserisci il {0}° numero", i + 1);
+            sumNumberIns += Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" ");
+
+        }
+
+        Console.WriteLine("Il somma dei numeri inseriti è: " + sumNumberIns);
+
+        break;
 
     default:
+        Console.WriteLine("Il codice inserito è erratto");
         break;
 }
 
