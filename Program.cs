@@ -249,8 +249,38 @@ switch (optionSelected)
             sumNumberSnack9 += Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(" ");
 
-            Console.WriteLine("La somma dei numeri inserti fino ad ora è: " + sumNumberSnack9);
+            Console.WriteLine("La somma dei numeri inseriti fino ad ora è: " + sumNumberSnack9);
             Console.WriteLine(" ");
+
+        }
+
+        break;
+    #endregion
+
+    case 10:
+        #region
+        Console.WriteLine("Inserisci un numero");
+        int N = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 0; i < N; i++)
+        {
+            int[] newArray = new int [10];
+
+            for (int x = 0; x < 10; x++)
+            {
+                Random rd = new Random();
+
+                int rand_num = rd.Next(1, 100);
+
+                newArray[x] = rand_num;
+            }
+
+            Console.WriteLine("L'array " + (i + 1) + " è formato da: ");
+
+            for (int y = 0; y < newArray.Length; y++)
+            {
+               Console.Write(newArray[y] + " ");
+            }
 
         }
 
