@@ -49,6 +49,7 @@ Console.WriteLine(" 5 - Snack 5");
 Console.WriteLine(" 6 - Snack 6");
 Console.WriteLine(" 7 - Snack 7");
 Console.WriteLine(" 8 - Snack 8");
+Console.WriteLine(" 9 - Snack 9");
 
 Console.WriteLine(" ");
 
@@ -236,9 +237,43 @@ switch (optionSelected)
         break;
     #endregion
 
+    case 9:
+        #region
+        int[] numbersInsertSnack9 = new int[50];
+
+        int sumNumberSnack9 = 0;
+
+        while (sumNumberSnack9 < 50)
+        {
+            Console.WriteLine("Inserisci un numero");
+            sumNumberSnack9 += Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" ");
+
+            Console.WriteLine("La somma dei numeri inserti fino ad ora è: " + sumNumberSnack9);
+            Console.WriteLine(" ");
+
+        }
+
+        break;
+    #endregion
+
+
     default:
         Console.WriteLine("Il codice inserito è erratto");
         break;
 }
 
 
+//Ciclo while
+
+//Snack9.
+//Crea un array vuoto e chiedi all'utente un numero da inserire nell'array.
+//Continua a chiedere i numeri all'utente e a inserirli nell'array, fino a quando la somma degli elementi è minore di 50.
+
+
+//Random
+//Snackl0.
+
+//Fai inserire un numero, che chiameremo N, all'utente.
+//Genera Narray, ognuno formato da 10 numeri casuali tra 1 e 100.
+//Ogni volta che ne crei uno, stampalo a schermo.
