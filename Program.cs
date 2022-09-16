@@ -12,6 +12,17 @@
 // Il software deve chiedere per 10 volte all'utente di inserire un numero.
 // Il programma stampa la somma di tutti i numeri inseriti.
 
+// SNACK 4
+// Calcola la somma e la media dei numeri da 2 a 10.
+
+//Operatore modulo
+
+//Snack5.
+//Il software chiede all'utente di inserire un numero.
+//Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+
+
+using System;
 
 Console.WriteLine("Ciao! Scegli uno dei seguenti Snack:");
 
@@ -20,6 +31,7 @@ Console.WriteLine(" 1 - Snack 1");
 Console.WriteLine(" 2 - Snack 2");
 Console.WriteLine(" 3 - Snack 3");
 Console.WriteLine(" 4 - Snack 4");
+Console.WriteLine(" 5 - Snack 5");
 
 Console.WriteLine(" ");
 
@@ -110,6 +122,24 @@ switch (optionSelected)
         Console.WriteLine("La media dei numeri è: " + sumNumber/9);
 
         break;
+    #endregion
+
+    case 5:
+        #region
+        Console.WriteLine("Inserisci un numero");
+        int numberInsert3 = Convert.ToInt32(Console.ReadLine());
+
+        if (numberInsert3 % 2 == 0)
+        {
+            Console.WriteLine("Il numero inserito è pari: " + numberInsert3);
+        }
+        else
+        {
+            numberInsert3 += 1; 
+            Console.WriteLine("Il numero inserito è dispari, il numero successivo " + numberInsert3 );
+        }
+                
+        break;
         #endregion
 
     default:
@@ -119,7 +149,4 @@ switch (optionSelected)
 
 
 
-
-// SNACK 4
-// Calcola la somma e la media dei numeri da 2 a 10.
 
