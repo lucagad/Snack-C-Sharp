@@ -209,13 +209,33 @@ switch (optionSelected)
         }
 
         break;
-        #endregion
+    #endregion
+
+    case 8:
+        #region
+        int[] numbers = {2,4,6,8,34,9,10,3,8};
+
+        int sumNumberArray = 0;
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            
+            if (i % 2 != 0)
+            {
+                sumNumberArray += numbers[i];
+            }
+
+        }
+
+        Console.WriteLine("La somma dei numeri in posizione dispari è: " + sumNumberArray);
+
+        break;
+    #endregion
 
     default:
         Console.WriteLine("Il codice inserito è erratto");
         break;
 }
-
 
 
 // Snack8
