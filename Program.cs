@@ -34,7 +34,18 @@
 // Snack8
 // Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
+//Ciclo while
 
+//Snack9.
+//Crea un array vuoto e chiedi all'utente un numero da inserire nell'array.
+//Continua a chiedere i numeri all'utente e a inserirli nell'array, fino a quando la somma degli elementi è minore di 50.
+
+//Random
+//Snackl0.
+
+//Fai inserire un numero, che chiameremo N, all'utente.
+//Genera Narray, ognuno formato da 10 numeri casuali tra 1 e 100.
+//Ogni volta che ne crei uno, stampalo a schermo.
 
 using System;
 
@@ -50,6 +61,8 @@ Console.WriteLine(" 6 - Snack 6");
 Console.WriteLine(" 7 - Snack 7");
 Console.WriteLine(" 8 - Snack 8");
 Console.WriteLine(" 9 - Snack 9");
+Console.WriteLine(" 10 - Snack 10");
+Console.WriteLine(" 12 - Snack 12");
 
 Console.WriteLine(" ");
 
@@ -281,29 +294,34 @@ switch (optionSelected)
             {
                Console.Write(newArray[y] + " ");
             }
-
+            Console.WriteLine(" ");
         }
 
         break;
     #endregion
 
 
+    case 12:
+        #region
+        Console.WriteLine("Inserisci un numero");
+        int numberToCheck = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine(verifyNumber(numberToCheck));
+
+        break;
+    #endregion
+
     default:
         Console.WriteLine("Il codice inserito è erratto");
         break;
+};
+
+
+static string verifyNumber(int number)
+{
+    if ( number % 2 == 0){
+        return "Il numero è pari";
+    } else {
+        return "Il numero è dispari";
+    }
 }
-
-
-//Ciclo while
-
-//Snack9.
-//Crea un array vuoto e chiedi all'utente un numero da inserire nell'array.
-//Continua a chiedere i numeri all'utente e a inserirli nell'array, fino a quando la somma degli elementi è minore di 50.
-
-
-//Random
-//Snackl0.
-
-//Fai inserire un numero, che chiameremo N, all'utente.
-//Genera Narray, ognuno formato da 10 numeri casuali tra 1 e 100.
-//Ogni volta che ne crei uno, stampalo a schermo.
